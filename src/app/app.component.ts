@@ -1,12 +1,11 @@
-/// <reference types="@types/googlemaps" />
 
 import { Component, OnInit, ViewChild, ElementRef, NgZone, OnDestroy, Output, Input, EventEmitter } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { AgmMap, MapsAPILoader } from '@agm/core';
-import { Http } from "@angular/http";
 
 import * as _ from 'lodash';
-
+import { HttpClient } from '@angular/common/http';
+declare var google: any;
 class Address {
     id?: number;
     street?: string;
@@ -65,7 +64,7 @@ export class AppComponent implements OnInit, OnDestroy {
     constructor(
         private mapsApiLoader: MapsAPILoader,
         private ngZone: NgZone,
-        private http: Http
+        private http: HttpClient
 
     ) { }
 
@@ -170,9 +169,9 @@ export class AppComponent implements OnInit, OnDestroy {
             .subscribe(
                 data => {
                     this.routeJSON = (<any>data)._body;
-            
 
-                    
+
+
                 });
     }
 
