@@ -2,7 +2,7 @@
 import { Component, OnInit, ViewChild, ElementRef, NgZone, OnDestroy, Output, Input, EventEmitter } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { AgmMap, MapsAPILoader } from '@agm/core';
-
+// import { } from 'googlemaps';
 import * as _ from 'lodash';
 import { HttpClient } from '@angular/common/http';
 declare var google: any;
@@ -13,6 +13,7 @@ class Address {
     lat?: number;
     lng?: number;
 }
+declare var google: any;
 
 @Component({
     selector: 'app-root',
@@ -93,7 +94,7 @@ export class AppComponent implements OnInit, OnDestroy {
                 this.setPlacesAutocomplete();
 
                 // workaround to restrict Autocomplete to get addresses within the chosen city boundaries
-                this.maps.boundsChange.subscribe(bounds => this.autoComplete.setBounds(bounds));
+                // this.maps.boundsChange.subscribe(bounds => this.autoComplete.setBounds(bounds));
 
                 this.setupPlaceChangedListener();
             })

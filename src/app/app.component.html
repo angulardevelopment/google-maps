@@ -37,10 +37,10 @@
             </div>
         </div>
         <div id="map" class="col col-xl-8 col-lg-12">
-            <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false">
-  
+            <!-- <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false">
+
                 <div *ngIf="markers.length >= 1" >
-                    <div *ngFor="let marker of markers"> 
+                    <div *ngFor="let marker of markers">
                         <agm-marker [latitude]="marker.lat" [longitude]="marker.lng" [label]="marker.label">
                         </agm-marker>
                     </div>
@@ -53,8 +53,8 @@
                         </agm-polyline-point>
                     </agm-polyline>
                 </div>
-  
-            </agm-map>
+
+            </agm-map> -->
         </div>
     </div>
     <div>
@@ -63,4 +63,3 @@
         </textarea>
     </div>
   </div>
-  

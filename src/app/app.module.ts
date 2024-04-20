@@ -8,18 +8,21 @@ import { AgmCoreModule } from '@agm/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
     AgmCoreModule.forRoot({
-      apiKey: CONFIG.GOOGLE_API_KEY,
+      apiKey: '', // CONFIG.GOOGLE_API_KEY
       libraries: ['places', 'geometry']
   }),
+  ],
+  declarations: [
+    AppComponent
+  ],
+  exports: [
+    AppComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
