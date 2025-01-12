@@ -78,10 +78,10 @@ export class AppComponent implements OnInit, OnDestroy {
     }
 
     setGoogleMaps(): void {
-        this.maps.mapReady.subscribe(
-            mapReady => this.directionsDisplay.setMap(mapReady),
-            e => console.log('Error setting map in DirectionRenderer', e)
-        );
+        // this.maps.mapReady.subscribe(
+        //     mapReady => this.directionsDisplay.setMap(mapReady),
+        //     e => console.log('Error setting map in DirectionRenderer', e)
+        // );
 
         this.labelIndex = 0;
 
